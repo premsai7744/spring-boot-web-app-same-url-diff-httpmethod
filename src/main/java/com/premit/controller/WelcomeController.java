@@ -9,16 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WelcomeController {
 	
 	@ResponseBody
-	@RequestMapping(path="/welcome", method=RequestMethod.GET)
+	@RequestMapping(path="/welcome", method = {RequestMethod.GET,RequestMethod.POST})
 	public String printWelcomeMessageOne() {
 		return "Welcome to PremIT, Happy to see you.";
 	}
-	
-	@ResponseBody
-	@RequestMapping(path="/welcome", method=RequestMethod.POST)
-	public String printWelcomeMessageTwo() {
-		return "Wishing you a great welcome to PremIT.";
-	}
-	
 	
 }
